@@ -3,7 +3,7 @@ title: "Getting started with Testcontainers for .NET"
 date: 2023-05-02T09:39:58+05:30
 draft: false
 description: This guide will help you to get started with Testcontainers for .NET by demonstrating how you can use PostgreSQL for testing.
-repo: https://github.com/testcontainers/tc-guide-getting-started-with-testcontainers-for-dotnet
+repo: https://github.com/testcontainers/testcontainers-for-dotnet-example
 languages:
   - C#
 tags:
@@ -12,7 +12,7 @@ tags:
 ---
 :toc:
 :toclevels: 2
-:codebase: https://raw.githubusercontent.com/testcontainers/tc-guide-getting-started-with-testcontainers-for-dotnet/main
+:codebase: https://raw.githubusercontent.com/testcontainers/testcontainers-for-dotnet-example/main
 
 Testcontainers is a testing library that provides easy and lightweight APIs for
 bootstrapping integration tests with real services wrapped in Docker

@@ -26,11 +26,11 @@ Server: Docker Desktop 4.12.0 (85629)
 * Clone the repository
 
 ```shell
-git clone https://github.com/testcontainers/tc-guide-getting-started-with-testcontainers-for-dotnet.git
-cd tc-guide-getting-started-with-testcontainers-for-dotnet/TestcontainersDemo
+git clone https://github.com/testcontainers/testcontainers-for-dotnet-example.git
+cd testcontainers-for-dotnet-example/TestcontainersDemo
 ```
 
-* Open the **tc-guide-getting-started-with-testcontainers-for-dotnet/TestcontainersDemo** project in your favorite IDE.
+* Open the **testcontainers-for-dotnet-example/TestcontainersDemo** project in your favorite IDE.
 
 ## 3. Run Tests
 

@@ -1,26 +1,25 @@
-name: Build
+name: Build .NET setup
 
 on:
   push:
     branches:
-      - '**'
+      - "**"
+  workflow_dispatch:
+
 jobs:
-  build:
-    name: Build
+  build-and-test:
+    name: Build and Test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet-version: [ '7.0.x' ]
     defaults:
       run:
         working-directory: "TestcontainersDemo"
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET Core SDK 7.0.x
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
-      - name: Install dependencies
-        run: dotnet restore
+          dotnet-version: 7.0.x
+
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test --verbosity normal

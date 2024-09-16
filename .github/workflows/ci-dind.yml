@@ -1,0 +1,22 @@
+name: Build DIND
+
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test
+        run: |
+          docker run --rm --workdir /app/TestcontainersDemo \
+          -v ${{ github.workspace }}:/app \
+          -v //var/run/docker.sock:/var/run/docker.sock \
+          mcr.microsoft.com/dotnet/sdk:7.0 \
+          dotnet test --verbosity normal
